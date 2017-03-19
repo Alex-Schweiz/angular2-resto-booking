@@ -1,0 +1,40 @@
+.appointment {
+  padding: 15px;
+  width: 800px;
+  background-color: #90ee90;
+  color: #fff;
+}
+
+.app-timestamp {
+  padding: 12px;
+}
+
+.app-button {
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.app-time {
+  padding-left: 40px;
+  float: left;
+}
+
+.app-slots {
+  margin-left: 130px;
+}
+
+.app-booking {
+  float: right;
+  color: #0f0f0f;
+  padding-right: 25px;
+}
+
+.modal-content {
+  padding: 7px;
+}
+
+.modal-body {
+  padding-left: 15px;
+}

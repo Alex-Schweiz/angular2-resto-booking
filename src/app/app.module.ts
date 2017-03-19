@@ -9,6 +9,8 @@ import {HomeComponent} from "./components/home/home.component";
 import {AboutComponent} from "./components/about/about.component";
 import {ReservationComponent} from "./components/reservation/reservation.component";
 import {routing, appRoutingProviders} from "./app.routing";
+import {CalendarComponent} from "./components/calendar/calendar.component";
+import {AppointmentComponent} from "./components/appointment/appointment.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {routing, appRoutingProviders} from "./app.routing";
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ReservationComponent
+    ReservationComponent,
+    CalendarComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,

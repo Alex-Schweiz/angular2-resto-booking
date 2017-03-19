@@ -1,0 +1,39 @@
+h2, h3, th {
+  text-align: center;
+}
+
+table {
+  width: 800px;
+  margin: 60px auto;
+}
+
+th {
+  color: #555;
+  height: 90px;
+  width: 130px;
+  font-size: 1.65em;
+  font-weight: 200;
+}
+
+.monthName {
+  color: #686868;
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+span.dayNumber {
+  padding: 11px 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.2s;
+  line-height: 78px;
+}
+
+span.dayNumber:hover {
+  background-color: #00A000;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: #000;
+}

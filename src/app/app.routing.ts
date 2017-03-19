@@ -4,6 +4,8 @@ import {ModuleWithProviders} from "@angular/core";
 import {HomeComponent} from "./components/home/home.component";
 import {AboutComponent} from "./components/about/about.component";
 import {ReservationComponent} from "./components/reservation/reservation.component";
+import {CalendarComponent} from "./components/calendar/calendar.component";
+import {AppointmentComponent} from "./components/appointment/appointment.component";
 
 
 const appRoutes: Routes = [
@@ -18,6 +20,14 @@ const appRoutes: Routes = [
   {
     path: 'reservation',
     component: ReservationComponent
+  },
+  {
+    path: 'calendar',
+    component: CalendarComponent
+  },
+  {
+    path: 'appointment',
+    component: AppointmentComponent
   }
 ];
 
