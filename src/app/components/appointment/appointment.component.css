@@ -11,10 +11,16 @@
 }
 
 .app-button {
-  padding: 8px;
+  padding: 9px 20px;
   background-color: #fff;
   cursor: pointer;
   border-radius: 22px;
+  transition: 0.5s;
+}
+
+.app-button:hover {
+  background-color: #222;
+  color: #fff;
 }
 
 .app-time {
@@ -36,6 +42,6 @@
   padding: 7px;
 }
 
-.modal-body {
+.modal-body, .modal-footer {
   padding-left: 15px;
 }
