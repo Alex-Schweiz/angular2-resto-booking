@@ -14,8 +14,7 @@ export class ReservationComponent  {
   pageDescription: string = 'Be it a business meeting lunch, a family birthday dinner, anniversary or a proposal romantic dinner or any other event… We will make sure the atmosphere and dishes do the justice! ';
   imagePath: string = '../../../assets/images/';
 
-  tables: ITable[] = [
-    {
+  tables: ITable[] = [{
       "tableId": 1,
       "guests": 2,
       "className" : "col-md-3",
