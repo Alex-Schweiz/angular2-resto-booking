@@ -1,14 +1,17 @@
-<div class="login">
-  <h2>Login to Resto Booking</h2>
-  <form>
-    <div class="form-group">
-      <button class="btn btn-primary form-control" (click)="loginGoogle()" id="google" data-dismiss="modal">Login With Google</button>
-    </div>
-    <div class="form-group">
-      <button class="btn btn-success form-control" routerLink="/login-email" id="email" data-dismiss="modal">Email</button>
-    </div>
+<navbar></navbar>
+<div class="container">
+  <div class="login">
+    <h2>Login to Resto Booking</h2>
+    <form>
+      <div class="form-group">
+        <button class="btn btn-primary form-control" (click)="loginGoogle()" id="google" data-dismiss="modal">Login With Google</button>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success form-control" routerLink="/login-email" id="email" data-dismiss="modal">Email</button>
+      </div>
 
-    <a class="btn btn-default form-control" routerLink="/signup" routerLinkActive="active" data-dismiss="modal">No account? <strong>Create one here</strong></a>
-  </form>
+      <a class="btn btn-default form-control" routerLink="/signup" routerLinkActive="active" data-dismiss="modal">No account? <strong>Create one here</strong></a>
+    </form>
 
+  </div>
 </div>

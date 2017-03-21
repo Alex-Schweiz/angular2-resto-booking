@@ -1,12 +1,15 @@
-<h1>{{pageTitle}}</h1>
-<h2>{{pageMotto}}</h2>
-<p>{{pageDescription}}</p>
+<navbar></navbar>
+<div class="container">
+  <h1>{{pageTitle}}</h1>
+  <h2>{{pageMotto}}</h2>
+  <p>{{pageDescription}}</p>
 
-<!-- Ng If Tables -->
-<div *ngIf='tables && tables.length' class="row" >
-  <div *ngFor="let table of tables"  [class]="table.className"  >
-    <div class="oneTable" [attr.data-guests]='table.guests'>
-      <img [src]="imagePath + table.imageUrl" >
+  <!-- Ng If Tables -->
+  <div *ngIf='tables && tables.length' class="row" >
+    <div *ngFor="let table of tables"  [class]="table.className"  >
+      <div class="oneTable" [attr.data-guests]='table.guests'>
+        <img [src]="imagePath + table.imageUrl" >
+      </div>
     </div>
   </div>
 </div>

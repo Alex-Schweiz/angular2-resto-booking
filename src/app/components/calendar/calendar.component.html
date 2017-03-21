@@ -1,8 +1,11 @@
-<h2>TABLE RESERVATION FOR 6 PERSON</h2>
-<h3> PLEASE CLICK ON ONE OF THE WHITE BOXES TO SPECIFY THE TIME SLOT FOR YOUR FREE CONSULTATION </h3>
+<navbar></navbar>
 
-<table id="table">
-  <thead>
+<div class="container">
+  <h2>TABLE RESERVATION FOR 6 PERSON</h2>
+  <h3> PLEASE CLICK ON ONE OF THE WHITE BOXES TO SPECIFY THE TIME SLOT FOR YOUR FREE CONSULTATION </h3>
+
+  <table id="table">
+    <thead>
     <tr>
       <th colspan="7" class="monthName">March 2017</th>
     </tr>
@@ -15,8 +18,8 @@
       <th>Sat</th>
       <th>Sun</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <tr class="week">
       <th><span class="dayNumber" data-toggle="tooltip" data-placement="top" title="Hooray!">1</span></th>
       <th><span class="dayNumber"> 2</span></th>
@@ -53,26 +56,27 @@
       <th><span class="dayNumber">27</span></th>
       <th><span class="dayNumber">28</span></th>
     </tr>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<!--<script>
-  var table = document.getElementById('table');
-  var selectedTd;
+  <!--<script>
+    var table = document.getElementById('table');
+    var selectedTd;
 
-  table.onclick = function(event) {
-    var target = event.target; // где был клик?
+    table.onclick = function(event) {
+      var target = event.target; // где был клик?
 
-    if (target.tagName != 'TD') return; // не на TD? тогда не интересует
+      if (target.tagName != 'TD') return; // не на TD? тогда не интересует
 
-    highlight(target); // подсветить TD
-  };
+      highlight(target); // подсветить TD
+    };
 
-  function highlight(node) {
-    if (selectedTd) {
-      selectedTd.classList.remove('highlight');
+    function highlight(node) {
+      if (selectedTd) {
+        selectedTd.classList.remove('highlight');
+      }
+      selectedTd = node;
+      selectedTd.classList.add('highlight');
     }
-    selectedTd = node;
-    selectedTd.classList.add('highlight');
-  }
-</script>-->
+  </script>-->
+</div>

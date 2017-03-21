@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-other',
-  templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css']
+  templateUrl: 'admin-dash.component.html',
+  styleUrls: ['admin-dash.component.css']
 })
 
-export class MembersComponent implements OnInit {
+export class AdminDashComponent implements OnInit {
   name: any;
   state: string = '';
 
@@ -24,7 +24,7 @@ export class MembersComponent implements OnInit {
 
   logout() {
     this.af.auth.logout();
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/');
   }
 
 

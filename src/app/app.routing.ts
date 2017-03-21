@@ -10,7 +10,7 @@ import { AuthGuard } from './shared/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { EmailComponent } from './components/email/email.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { MembersComponent } from './components/members/members.component';
+import { AdminDashComponent } from './components/admin/admin-dash/admin-dash.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
-  { path: 'members', component: MembersComponent, canActivate: [AuthGuard] }
+  { path: 'admin/dashboard', component: AdminDashComponent, canActivate: [AuthGuard] }
 
 ];
 

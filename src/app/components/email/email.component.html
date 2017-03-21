@@ -1,13 +1,16 @@
-<div class="form-container">
-  <h2>Login by email</h2>
-  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
-    <div class="form-group">
-      <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <input type="password" placeholder="Password" (ngModel)="password" name="password" class="form-control" required>
-    </div>
-    <button type="submit" [disabled]="!formData.valid" class="btn btn-success">Log in</button>
-    <a routerLink="/signup" class="btn btn-default">Don't have an account?</a>
-  </form>
+<navbar></navbar>
+<div class="container">
+  <div class="form-container">
+    <h2>Login by email</h2>
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+      <div class="form-group">
+        <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" (ngModel)="password" name="password" class="form-control" required>
+      </div>
+      <button type="submit" [disabled]="!formData.valid" class="btn btn-success">Log in</button>
+      <a routerLink="/signup" class="btn btn-default">Don't have an account?</a>
+    </form>
+  </div>
 </div>
