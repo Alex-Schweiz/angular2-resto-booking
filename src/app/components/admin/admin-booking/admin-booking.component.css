@@ -187,3 +187,13 @@ li.nav-item-elements {
 .page-header {
   color: #73879C;
 }
+
+th {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+table {
+  width: 99%;
+}

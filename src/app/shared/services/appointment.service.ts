@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import { ITimestamp } from '../timestamp';
+import { ITimestamp } from '../interfaces/timestamp';
 
 import 'rxjs/add/operator/map';
 

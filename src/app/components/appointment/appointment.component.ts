@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TimestampsService } from '../../shared/services/appointment.service';
 
-import { ITimestamp } from '../../shared/timestamp';
+import { ITimestamp } from '../../shared/interfaces/timestamp';
 
 @Component({
   moduleId: module.id,

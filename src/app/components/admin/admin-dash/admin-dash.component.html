@@ -15,7 +15,7 @@
         </li>
 
         <li class="list-group-item">
-          <a routerLink="/admin/dashboard"><i class="fa fa-fw fa-table"></i> Tables</a>
+          <a routerLink="/admin/bookings"><i class="fa fa-fw fa-table"></i> Bookings</a>
         </li>
 
         <li class="list-group-item">
@@ -74,4 +74,35 @@
 
     </div>
   </div>
+
+  <h3>Latest 10 bookings</h3>
+
+  <div class="container">
+    <table *ngIf="bookings && bookings.length" class="table table-striped" >
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Number of persons</th>
+        <th>Date of Reservation</th>
+        <th>Time of Reservation</th>
+        <th>Comment</th>
+        <th rowspan="2">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let booking of bookings">
+        <th>{{booking.firstName}} {{booking.lastName}}</th>
+        <th>{{booking.phone}}</th>
+        <th>{{booking.numberOfPersons}}</th>
+        <th>{{booking.dateOfReservation}}</th>
+        <th>{{booking.timeOfReservation}}</th>
+        <th>{{booking.comment}}</th>
+        <th><button class="btn btn-warning">Edit</button></th>
+        <th><button class="btn btn-danger">Delete</button></th>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>

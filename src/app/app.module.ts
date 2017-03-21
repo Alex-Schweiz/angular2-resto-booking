@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EmailComponent } from './components/email/email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AdminDashComponent } from './components/admin/admin-dash/admin-dash.component';
+import { AdminBookingComponent } from './components/admin/admin-booking/admin-booking.component';
 
 //Providers
 import {routing, appRoutingProviders} from "./app.routing";
@@ -40,7 +41,8 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    AdminDashComponent
+    AdminDashComponent,
+    AdminBookingComponent
   ],
   imports: [
     BrowserModule,

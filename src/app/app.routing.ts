@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EmailComponent } from './components/email/email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AdminDashComponent } from './components/admin/admin-dash/admin-dash.component';
+import { AdminBookingComponent } from './components/admin/admin-booking/admin-booking.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
-  { path: 'admin/dashboard', component: AdminDashComponent, canActivate: [AuthGuard] }
+  { path: 'admin/dashboard', component: AdminDashComponent, canActivate: [AuthGuard] },
+  { path: 'admin/bookings', component: AdminBookingComponent, canActivate: [AuthGuard] }
 
 ];
 
