@@ -1,2 +1,85 @@
-<button (click)="logout()" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Logout</button>
-<h2> Welcome to the Admin page</h2>
+<!--<button (click)="logout()" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Logout</button>
+<h2> Welcome to the Admin page</h2>-->
+
+<div id="wrapper">
+  <!-- Navigation -->
+  <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/" >Resto Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
+      <ul class="nav navbar-nav side-nav list-group">
+        <li class="list-group-item">
+          <a routerLink="/admin/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+        </li>
+
+        <li class="list-group-item">
+          <a routerLink="/admin/dashboard"><i class="fa fa-fw fa-table"></i> Tables</a>
+        </li>
+
+        <li class="list-group-item">
+          <a  data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="demo" class="list-group collapse">
+            <li class="list-group-item">
+              <a >Dropdown Item</a>
+            </li>
+            <li class="list-group-item">
+              <a >Dropdown Item</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item">
+          <a (click)="logout()"><i class="glyphicon glyphicon-log-out"></i>  Log out</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div id="page-wrapper">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="tile-stats">
+          <div class="icon"><i class="fa fa-user"></i></div>
+          <div class="count">20</div>
+          <h3>New users</h3>
+          <p>Lorem ipsum psdea itgum rixt.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tile-stats">
+          <div class="icon"><i class="fa fa-gift"></i></div>
+          <div class="count">54</div>
+          <h3>New Deliveries</h3>
+          <p>Lorem ipsum psdea itgum rixt.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tile-stats">
+          <div class="icon"><i class="fa fa-dollar"></i></div>
+          <div class="count">$589.12</div>
+          <h3>Sales</h3>
+          <p>Lorem ipsum psdea itgum rixt.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tile-stats">
+          <div class="icon"><i class="fa fa-internet-explorer"></i></div>
+          <div class="count">1 709</div>
+          <h3>Site visitors</h3>
+          <p>Lorem ipsum psdea itgum rixt.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
