@@ -42,6 +42,7 @@
         <tr>
           <th>Name</th>
           <th>Phone</th>
+         <!-- <th>Email</th>-->
           <th>Number of persons</th>
           <th>Date of Reservation</th>
           <th>Time of Reservation</th>
@@ -53,6 +54,7 @@
         <tr *ngFor="let booking of bookings">
           <th>{{booking.firstName}} {{booking.lastName}}</th>
           <th>{{booking.phone}}</th>
+         <!-- <th>{{booking.email}}</th>-->
           <th>{{booking.numberOfPersons}}</th>
           <th>{{booking.dateOfReservation}}</th>
           <th>{{booking.timeOfReservation}}</th>

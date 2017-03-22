@@ -9,24 +9,22 @@ import 'rxjs/add/operator/map';
 export class TimestampsService {
   timestamps: FirebaseListObservable<ITimestamp[]>;
 
-  constructor(private _af: AngularFire){
-  }
+  constructor(private _af: AngularFire) { }
 
   getTimestamps(){
       this.timestamps = this._af.database.list('/appointments')as
         FirebaseListObservable<ITimestamp[]>;
     return this.timestamps;
   }
-
   /*getCategories(){
     this.categories = this._af.database.list('/categories')as
       FirebaseListObservable<Category[]>;
     return this.categories;
   }
 
-  addBusiness(newBusiness){
-    return this.businesses.push(newBusiness);
-  }
+   addTimestamp(newTimestamp) {
+   return this.timestamps.push(newTimestamp);
+   }
 
   updateBusiness(key, updBusiness){
     return this.businesses.update(key, updBusiness);

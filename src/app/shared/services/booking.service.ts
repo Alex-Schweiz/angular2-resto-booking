@@ -7,47 +7,33 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class BookingsService {
-  timestamps: FirebaseListObservable<IBooking[]>;
+  bookings: FirebaseListObservable<IBooking[]>;
 
   constructor(private _af: AngularFire){
   }
 
-  getBookings(){
-    this.timestamps = this._af.database.list('/bookings', {
+  getBookings() {
+    this.bookings = this._af.database.list('/bookings', {
       query: {
         orderByChild: 'dateOfReservation'
       }
     })as
       FirebaseListObservable<IBooking[]>;
-    return this.timestamps;
+    return this.bookings;
   }
 
-  getFiveBookings(){
-    this.timestamps = this._af.database.list('/bookings', {
+  getFiveBookings() {
+    this.bookings = this._af.database.list('/bookings', {
       query: {
         orderByChild: 'dateOfReservation',
         limitToLast: 5
       }
     })as
       FirebaseListObservable<IBooking[]>;
-    return this.timestamps;
+    return this.bookings;
   }
 
-  /*getCategories(){
-   this.categories = this._af.database.list('/categories')as
-   FirebaseListObservable<Category[]>;
-   return this.categories;
-   }
-
-   addBusiness(newBusiness){
-   return this.businesses.push(newBusiness);
-   }
-
-   updateBusiness(key, updBusiness){
-   return this.businesses.update(key, updBusiness);
-   }
-
-   deleteBusiness(key){
-   return this.businesses.remove(key);
-   }*/
+  addBooking(newBooking) {
+    return this.bookings.push(newBooking);
+  }
 }
