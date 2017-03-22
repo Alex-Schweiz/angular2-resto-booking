@@ -52,17 +52,73 @@
         </thead>
         <tbody>
         <tr *ngFor="let booking of bookings">
-          <th>{{booking.firstName}} {{booking.lastName}}</th>
+          <th><a (click)="showOneBooking(booking.$key)" data-toggle="modal" data-target="#showOneModal">{{booking.firstName}} {{booking.lastName}}</a> </th>
           <th>{{booking.phone}}</th>
          <!-- <th>{{booking.email}}</th>-->
           <th>{{booking.numberOfPersons}}</th>
           <th>{{booking.dateOfReservation}}</th>
           <th>{{booking.timeOfReservation}}</th>
           <th>{{booking.comment}}</th>
-          <th><button class="btn btn-warning">Edit</button></th>
+          <th><button class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button></th>
           <th><button (click)="deleteBooking(booking.$key)" class="btn btn-danger">Delete</button></th>
         </tr>
         </tbody>
       </table>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Edit a Booking</h4>
+          </div>
+
+          <div class="modal-body">
+            <p> Modal body. Here goes a form</p>
+
+            <!--<app-signup></app-signup>
+            <app-login></app-login>-->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Show One Modal -->
+    <div id="showOneModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Show one Booking</h4>
+          </div>
+
+          <div class="modal-body">
+            <p> Modal body. Here goes one booking edit</p>
+            <p>Phone </p>
+
+            <!--<app-signup></app-signup>
+            <app-login></app-login>-->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>
+
+

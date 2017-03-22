@@ -191,9 +191,13 @@ li.nav-item-elements {
 th {
   text-align: center;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 table {
   width: 99%;
+}
+
+a {
+  cursor: pointer;
 }

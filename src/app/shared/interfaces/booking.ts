@@ -1,5 +1,5 @@
 export interface IBooking {
-  $key?: string;
+  key?: string;
   firstName: string;
   lastName: string;
   phone?: number;

@@ -25,4 +25,7 @@ export class AdminBookingComponent implements OnInit {
     this._bookingService.deleteBooking(key);
   }
 
+  showOneBooking(key) {
+    this._bookingService.showOneBooking(key);
+  }
 }
