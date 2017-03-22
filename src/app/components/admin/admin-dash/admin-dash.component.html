@@ -75,7 +75,7 @@
     </div>
   </div>
 
-  <h3>Latest 10 bookings</h3>
+  <h3>Latest 5 bookings</h3>
 
   <div class="container">
     <table *ngIf="bookings && bookings.length" class="table table-striped" >
@@ -87,7 +87,6 @@
         <th>Date of Reservation</th>
         <th>Time of Reservation</th>
         <th>Comment</th>
-        <th rowspan="2">Actions</th>
       </tr>
       </thead>
       <tbody>
@@ -98,8 +97,6 @@
         <th>{{booking.dateOfReservation}}</th>
         <th>{{booking.timeOfReservation}}</th>
         <th>{{booking.comment}}</th>
-        <th><button class="btn btn-warning">Edit</button></th>
-        <th><button class="btn btn-danger">Delete</button></th>
       </tr>
       </tbody>
     </table>
