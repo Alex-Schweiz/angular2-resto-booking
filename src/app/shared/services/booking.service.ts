@@ -36,4 +36,7 @@ export class BookingsService {
   addBooking(newBooking) {
     return this.bookings.push(newBooking);
   }
+  deleteBooking(key) {
+  return this.bookings.remove(key);
+  }
 }

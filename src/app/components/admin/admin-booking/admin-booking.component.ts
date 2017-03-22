@@ -11,14 +11,18 @@ import { IBooking } from '../../../shared/interfaces/booking';
   providers: [BookingsService]
 })
 export class AdminBookingComponent implements OnInit {
-  pageTitle: string = 'All bookings';
+  pageTitle = 'All bookings';
   bookings: IBooking[];
 
   constructor(private _bookingService: BookingsService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this._bookingService.getBookings().subscribe( bookings =>
       this.bookings = bookings);
+  }
+
+  deleteBooking(key) {
+    this._bookingService.deleteBooking(key);
   }
 
 }

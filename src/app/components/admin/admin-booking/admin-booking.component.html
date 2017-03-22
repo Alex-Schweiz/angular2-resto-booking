@@ -60,11 +60,9 @@
           <th>{{booking.timeOfReservation}}</th>
           <th>{{booking.comment}}</th>
           <th><button class="btn btn-warning">Edit</button></th>
-          <th><button class="btn btn-danger">Delete</button></th>
+          <th><button (click)="deleteBooking(booking.$key)" class="btn btn-danger">Delete</button></th>
         </tr>
         </tbody>
       </table>
-
   </div>
-
 </div>

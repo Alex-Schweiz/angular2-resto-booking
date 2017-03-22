@@ -30,9 +30,9 @@ export class BookingTableComponent implements OnInit {
     email: string,
     numberOfPersons: number,
     comment: string) {
-    var created_at = new Date().toString();
+    const created_at = new Date().toString();
 
-    var newBooking = {
+    const newBooking = {
       firstName: firstName,
       lastName: lastName,
       phone: phone,
@@ -43,9 +43,7 @@ export class BookingTableComponent implements OnInit {
       timeOfReservation: timeOfReservation,
       created_at: created_at
     };
-
     console.log(newBooking);
-
     this._bookingService.addBooking(newBooking);
   }
 }

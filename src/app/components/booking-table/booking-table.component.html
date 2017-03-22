@@ -13,23 +13,23 @@
     <div class="col-md-8 col-md-offset-1">
       <div class="form-group col-md-6">
         <label >Date of reservation :</label>
-        <input type="date" class="form-control" #dateOfReservation>
+        <input type="date" class="form-control" #dateOfReservation required>
       </div>
       <div class="form-group col-md-6">
         <label>Time of reservation :</label>
-        <input type="time" class="form-control" #timeOfReservation>
+        <input type="time" class="form-control" #timeOfReservation required>
       </div>
       <div class="form-group col-md-6">
         <label>First Name :</label>
-        <input type="text" class="form-control" #firstName>
+        <input type="text" class="form-control" #firstName required>
       </div>
       <div class="form-group col-md-6">
         <label>Last Name :</label>
-        <input type="text" class="form-control" #lastName>
+        <input type="text" class="form-control" #lastName required>
       </div>
       <div class="form-group col-md-12">
         <label>Phone :</label>
-        <input type="text" class="form-control" #phone>
+        <input type="text" class="form-control" #phone required>
       </div>
       <div class="form-group col-md-12">
         <label>Email :</label>
@@ -55,6 +55,7 @@
       </div>
 
       <button type="submit" class="btn btn-success">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
     </div>
 
   </form>
