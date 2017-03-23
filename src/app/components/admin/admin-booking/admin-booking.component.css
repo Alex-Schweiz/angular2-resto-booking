@@ -201,3 +201,16 @@ table {
 a {
   cursor: pointer;
 }
+
+h4 {
+  margin-left: 15px;
+  font-size: 24px;
+}
+h5 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+}

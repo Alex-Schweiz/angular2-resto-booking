@@ -9,22 +9,7 @@ import 'rxjs/add/operator/map';
 export class BookingsService {
   bookings: FirebaseListObservable<IBooking[]>;
 
-  activeBooking: string;
-
-  activeCompany: string;
-  activeCategory: string;
-  activeYearsInBusiness: string;
-  activeDescription: string;
-  activePhone: string;
-  activeEmail: string;
-  activeStreetAddress: string;
-  activeCity: string;
-  activeState: string;
-  activeZipcode: string;
-
-
-
-  constructor(private _af: AngularFire){
+  constructor(private _af: AngularFire) {
   }
 
   getBookings() {
@@ -57,5 +42,8 @@ export class BookingsService {
   showOneBooking(key) {
     console.dir('This booking ' );
     return this.bookings['key'];
+  }
+  updateBooking(key, updBooking) {
+    return this.bookings.update(key, updBooking);
   }
 }

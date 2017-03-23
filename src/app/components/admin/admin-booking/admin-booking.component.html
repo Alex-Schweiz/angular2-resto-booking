@@ -52,14 +52,14 @@
         </thead>
         <tbody>
         <tr *ngFor="let booking of bookings">
-          <th><a (click)="showOneBooking(booking.$key)" data-toggle="modal" data-target="#showOneModal">{{booking.firstName}} {{booking.lastName}}</a> </th>
+          <th><a (click)="showEdit(booking)" data-toggle="modal" data-target="#showOneModal">{{booking.firstName}} {{booking.lastName}}</a> </th>
           <th>{{booking.phone}}</th>
          <!-- <th>{{booking.email}}</th>-->
           <th>{{booking.numberOfPersons}}</th>
           <th>{{booking.dateOfReservation}}</th>
           <th>{{booking.timeOfReservation}}</th>
           <th>{{booking.comment}}</th>
-          <th><button class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button></th>
+          <th><button (click)="showEdit(booking)" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button></th>
           <th><button (click)="deleteBooking(booking.$key)" class="btn btn-danger">Delete</button></th>
         </tr>
         </tbody>
@@ -77,8 +77,64 @@
           </div>
 
           <div class="modal-body">
-            <p> Modal body. Here goes a form</p>
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Booking of  <strong>{{activeFirstName}} {{activeLastName}}</strong></h4>
 
+                <form (submit)="updateBooking()">
+                  <div class="col-md-12">
+                    <div class="form-group col-md-6">
+                      <label >Date of reservation :</label>
+                      <input type="date" class="form-control" [(ngModel)]="activeDateOfReservation" name="activeDateOfReservation" placeholder="Date Of Reservation" #dateOfReservation required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Time of reservation :</label>
+                      <input type="time" class="form-control" [(ngModel)]="activeTimeOfReservation" name="activeTimeOfReservation" placeholder="Time Of Reservation" #timeOfReservation required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>First Name :</label>
+                      <input type="text" class="form-control" [(ngModel)]="activeFirstName" name="activeFirstName" placeholder="First Name" #firstName required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Last Name :</label>
+                      <input type="text" class="form-control" [(ngModel)]="activeLastName" name="activeLastName" placeholder="Last Name" #lastName required>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                      <label>Phone :</label>
+                      <input type="text" class="form-control" [(ngModel)]="activePhone" name="activePhone" placeholder="Phone" #phone required>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                      <label>Email :</label>
+                      <input type="email" class="form-control" [(ngModel)]="activeEmail" name="activeEmail" placeholder="Email" #email>
+                    </div>
+                    <div class="form-group col-md-12">
+                      <label>Number of persons :</label>
+                      <select class="form-control" [(ngModel)]="activeNumberOfPersons" name="activeNumberOfPersons" placeholder="NumberOfPersons" #numberOfPersons>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                      <label>Leave your comment :</label>
+                      <textarea class="form-control" rows="5" [(ngModel)]="activeComment" name="activeComment" placeholder="Comment" #comment></textarea>
+                    </div>
+
+                    <button type="submit" (click)="updateBooking()" class="btn btn-success" data-dismiss="modal">Submit</button>
+                    <button type="reset" class="btn btn-default" >Reset</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
             <!--<app-signup></app-signup>
             <app-login></app-login>-->
           </div>
@@ -87,7 +143,6 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -103,8 +158,14 @@
           </div>
 
           <div class="modal-body">
-            <p> Modal body. Here goes one booking edit</p>
-            <p>Phone </p>
+            <h5>Booking of  <strong>{{activeFirstName}} {{activeLastName}}</strong></h5>
+
+            <p><strong>Phone  </strong> {{activePhone}}</p>
+            <p><strong>Email  </strong> {{activeEmail}}</p>
+            <p><strong>Comment  </strong> {{activeComment}}</p>
+            <p><strong>Number of persons  </strong> {{activeNumberOfPersons}}</p>
+            <p><strong>Date of reservation  </strong> {{activeDateOfReservation}}</p>
+            <p><strong>Time of reservation  </strong> {{activeTimeOfReservation}}</p>
 
             <!--<app-signup></app-signup>
             <app-login></app-login>-->

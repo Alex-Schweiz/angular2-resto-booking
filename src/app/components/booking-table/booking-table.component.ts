@@ -46,4 +46,8 @@ export class BookingTableComponent implements OnInit {
     console.log(newBooking);
     this._bookingService.addBooking(newBooking);
   }
+
+
+
+
 }
