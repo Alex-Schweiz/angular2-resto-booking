@@ -1,45 +1,47 @@
-<div class="appointment">
-  <h3>{{pageTitle}}</h3>
 
-  <!-- Timestamps -->
-  <div *ngIf="timestamps && timestamps.length">
-    <div class="app-timestamp" *ngFor="let timestamp of timestamps">
-      <span class="app-time"><i class="glyphicon glyphicon-time"></i>  {{timestamp.time}}</span>
-      <span class="app-slots">{{timestamp.slots}} time slots available</span>
-      <span class="app-booking"><span class="app-button" data-toggle="modal" data-target="#myModal">Book an Appointment</span></span>
+<div class="">
+  <div class="appointment">
+    <h3>{{pageTitle}}</h3>
+
+    <!-- Timestamps -->
+    <div *ngIf="timestamps && timestamps.length">
+      <div class="app-timestamp" *ngFor="let timestamp of timestamps">
+        <span class="app-time"><i class="glyphicon glyphicon-time"></i>  {{timestamp.time}}</span>
+        <span class="app-slots">{{timestamp.slots}} time slots available</span>
+        <span class="app-booking"><span class="app-button" data-toggle="modal" data-target="#myModal">Book an Appointment</span></span>
+      </div>
     </div>
   </div>
-</div>
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Request an Appointment</h4>
-      </div>
-
-      <div class="modal-body">
-        <p><i class="glyphicon glyphicon-calendar"></i> March 24, 2017    <i class="glyphicon glyphicon-time"></i>  9:30 am – 10:30 am</p>
-
-        <div class="radio">
-          <label><input type="radio" name="optradio" checked >I'm active user</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">I'm new user</label>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Request an Appointment</h4>
         </div>
 
-        <app-signup></app-signup>
-        <app-login></app-login>
+        <div class="modal-body">
+          <p><i class="glyphicon glyphicon-calendar"></i> March 24, 2017    <i class="glyphicon glyphicon-time"></i>  9:30 am – 10:30 am</p>
+
+          <div class="radio">
+            <label><input type="radio" name="optradio" checked >I'm active user</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">I'm new user</label>
+          </div>
+
+          <!--<app-signup></app-signup>
+          <app-login></app-login>-->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
     </div>
-
   </div>
 </div>

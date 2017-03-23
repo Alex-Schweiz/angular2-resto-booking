@@ -15,7 +15,7 @@ export class EmailComponent implements OnInit {
   constructor(public af: AngularFire,private router: Router) {
     this.af.auth.subscribe(auth => {
       if(auth) {
-        this.router.navigateByUrl('/members');
+        this.router.navigateByUrl('admin/dashboard');
       }
     });
   }
@@ -34,7 +34,7 @@ export class EmailComponent implements OnInit {
         }).then(
         (success) => {
           console.log(success);
-          this.router.navigate(['/members']);
+          this.router.navigate(['admin/dashboard']);
         }).catch(
         (err) => {
           console.log(err);

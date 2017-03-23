@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
         password: formData.value.password
       }).then(
         (success) => {
-          this.router.navigate(['/members'])
+          this.router.navigate(['/admin-dash'])
         }).catch(
         (err) => {
           this.error = err;
