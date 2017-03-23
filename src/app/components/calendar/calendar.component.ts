@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: 'calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
-export class CalendarComponent  { }
+export class CalendarComponent  {
+   public showAppointments = false;
+
+  toggleAppointment(){
+    this.showAppointments = !this.showAppointments;
+  }
+}

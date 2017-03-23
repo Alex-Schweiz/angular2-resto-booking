@@ -40,7 +40,7 @@ export class AdminBookingComponent implements OnInit {
   }
 
   showEdit(booking) {
-    this.activeKey = booking.key;
+    this.activeKey = booking.$key;
     this.activeFirstName = booking.firstName;
     this.activeLastName = booking.lastName;
     this.activePhone = booking.phone;
@@ -49,6 +49,7 @@ export class AdminBookingComponent implements OnInit {
     this.activeComment = booking.comment;
     this.activeDateOfReservation = booking.dateOfReservation;
     this.activeTimeOfReservation = booking.timeOfReservation;
+
   }
 
   updateBooking() {
@@ -59,7 +60,7 @@ export class AdminBookingComponent implements OnInit {
       phone: this.activePhone,
       email: this.activeEmail,
       numberOfPersons: this.activeNumberOfPersons,
-      activeComment: this.activeComment,
+      comment: this.activeComment,
       dateOfReservation: this.activeDateOfReservation,
       timeOfReservation: this.activeTimeOfReservation
     }

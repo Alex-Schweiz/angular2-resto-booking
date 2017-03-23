@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group col-md-12">
                       <label>Number of persons :</label>
-                      <select class="form-control" [(ngModel)]="activeNumberOfPersons" name="activeNumberOfPersons" placeholder="NumberOfPersons" #numberOfPersons>
+                      <select class="form-control" [(ngModel)]="activeNumberOfPersons" name="activeNumberOfPersons" #numberOfPersons>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -154,21 +154,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Show one Booking</h4>
+            <h5>Booking of  <strong>{{activeFirstName}} {{activeLastName}}</strong></h5>
           </div>
 
           <div class="modal-body">
-            <h5>Booking of  <strong>{{activeFirstName}} {{activeLastName}}</strong></h5>
-
             <p><strong>Phone  </strong> {{activePhone}}</p>
             <p><strong>Email  </strong> {{activeEmail}}</p>
             <p><strong>Comment  </strong> {{activeComment}}</p>
             <p><strong>Number of persons  </strong> {{activeNumberOfPersons}}</p>
             <p><strong>Date of reservation  </strong> {{activeDateOfReservation}}</p>
             <p><strong>Time of reservation  </strong> {{activeTimeOfReservation}}</p>
-
-            <!--<app-signup></app-signup>
-            <app-login></app-login>-->
           </div>
 
           <div class="modal-footer">

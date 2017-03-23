@@ -17,7 +17,7 @@ export class AppointmentComponent implements OnInit {
   constructor(private _timestampsService: TimestampsService) {
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this._timestampsService.getTimestamps().subscribe( timestamps =>
       this.timestamps = timestamps);
   }
