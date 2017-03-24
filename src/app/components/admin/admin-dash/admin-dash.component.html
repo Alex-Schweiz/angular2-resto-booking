@@ -78,7 +78,7 @@
   <h3>Latest 5 bookings</h3>
 
   <div class="container">
-    <table *ngIf="bookings && bookings.length" class="table table-striped" >
+    <table *ngIf="bookings && bookings.reverse().length" class="table table-striped" >
       <thead>
       <tr>
         <th>Name</th>
@@ -90,13 +90,13 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let booking of bookings">
-        <th>{{booking.firstName}} {{booking.lastName}}</th>
-        <th>{{booking.phone}}</th>
-        <th>{{booking.numberOfPersons}}</th>
-        <th>{{booking.dateOfReservation}}</th>
-        <th>{{booking.timeOfReservation}}</th>
-        <th>{{booking.comment}}</th>
+      <tr [className]="'expired-dat'" *ngFor="let booking of bookings">
+        <td>{{booking.firstName}} {{booking.lastName}}</td>
+        <td>{{booking.phone}}</td>
+        <td>{{booking.numberOfPersons}}</td>
+        <td>{{booking.dateOfReservation}}</td>
+        <td>{{booking.timeOfReservation}}</td>
+        <td>{{booking.comment}}</td>
       </tr>
       </tbody>
     </table>

@@ -14,7 +14,6 @@ import { IBooking } from '../../../shared/interfaces/booking';
 
 export class AdminDashComponent implements OnInit {
   name: any;
-  state: string = '';
   bookings: IBooking[];
 
   constructor(public af: AngularFire,private router: Router, private _bookingService: BookingsService) {

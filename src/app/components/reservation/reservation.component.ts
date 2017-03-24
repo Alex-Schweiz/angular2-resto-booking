@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TablesService } from '../../shared/services/table.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { ITable } from '../../shared/interfaces/table';
 
@@ -19,11 +20,18 @@ export class ReservationComponent implements OnInit{
   tables: ITable[];
 
   constructor(private _tablesService: TablesService) {
+
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this._tablesService.getTables().subscribe( tables =>
       this.tables = tables);
+  }
+
+  showValue(tableId, guests) {
+    /*this.router.navigate(['/calendar']);*/
+    console.log('Mouse clicked on table ' + tableId + ' for ' + guests);
+
   }
 
 }

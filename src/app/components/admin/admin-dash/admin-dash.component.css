@@ -187,3 +187,7 @@ li.nav-item-elements {
 .page-header {
   color: #73879C;
 }
+
+.expired-date {
+  text-decoration: line-through ;
+}
