@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'reservation',  component: ReservationComponent },
   { path: 'calendar',  component: CalendarComponent },
   { path: 'appointment',  component: AppointmentComponent },
-  { path: 'booktable',  component: BookingTableComponent },
+  { path: 'booktable/:id',  component: BookingTableComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },

@@ -19,7 +19,10 @@ export class ReservationComponent implements OnInit{
 
   tables: ITable[];
 
-  constructor(private _tablesService: TablesService) {
+  constructor(
+    private _tablesService: TablesService,
+    private router: Router
+  ) {
 
   }
 
@@ -31,7 +34,7 @@ export class ReservationComponent implements OnInit{
   showValue(tableId, guests) {
     /*this.router.navigate(['/calendar']);*/
     console.log('Mouse clicked on table ' + tableId + ' for ' + guests);
-
+    this.router.navigate(['/booktable', tableId]);
   }
 
 }

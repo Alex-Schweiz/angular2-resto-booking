@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingsService } from '../../shared/services/booking.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { IBooking } from '../../shared/interfaces/booking';
 
@@ -11,19 +13,28 @@ import { IBooking } from '../../shared/interfaces/booking';
 })
 export class BookingTableComponent implements OnInit {
   pageTitle = 'Welcome to Booking table';
+  tableId;
   bookings: IBooking[];
 
-  constructor(private _bookingService: BookingsService) { }
+  constructor(
+    private _bookingService: BookingsService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this._bookingService.getBookings().subscribe( bookings => {
       this.bookings = bookings;
+    });
+    this.activatedRoute.params.subscribe((params: Params) => {
+      this.tableId = params['id'];
+      console.log( 'Selected table is : ' + this.tableId);
     });
   }
 
   addBooking(
     dateOfReservation: string,
     timeOfReservation: string,
+    tableId: string,
     firstName: string,
     lastName: string,
     phone: string,
@@ -33,21 +44,18 @@ export class BookingTableComponent implements OnInit {
     const created_at = new Date().toString();
 
     const newBooking = {
+      dateOfReservation: dateOfReservation,
+      timeOfReservation: timeOfReservation,
+      tableId: tableId,
       firstName: firstName,
       lastName: lastName,
       phone: phone,
       email: email,
       numberOfPersons: numberOfPersons,
       comment: comment,
-      dateOfReservation: dateOfReservation,
-      timeOfReservation: timeOfReservation,
       created_at: created_at
     };
     console.log(newBooking);
     this._bookingService.addBooking(newBooking);
   }
-
-
-
-
 }

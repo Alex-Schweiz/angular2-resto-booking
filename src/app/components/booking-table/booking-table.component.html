@@ -1,9 +1,11 @@
 <navbar></navbar>
 <div class="container">
   <h2>{{pageTitle}}</h2>
+  <h2> You have selected table ==  {{tableId}}</h2>
   <form (submit)="addBooking(
       dateOfReservation.value,
       timeOfReservation.value,
+      tableId,
       firstName.value,
       lastName.value,
       phone.value,
@@ -50,30 +52,12 @@
         </select>
       </div>
       <div class="form-group col-md-12">
-        <div class="radio">
-          <label><input type="radio" name="optradio">Table 1</label>
-          <img src="../../../assets/images/reservetion_01.png" alt="Table 1">
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Table 2</label>
-          <img src="../../../assets/images/reservetion_02.png" alt="Table 2">
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Table 3</label>
-          <img src="../../../assets/images/reservetion_03.png" alt="Table 3">
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Table 4</label>
-          <img src="../../../assets/images/reservetion_04.png" alt="Table 4">
-        </div>
-      </div>
-      <div class="form-group col-md-12">
         <label>Leave your comment :</label>
         <textarea class="form-control" rows="5" #comment></textarea>
       </div>
 
       <button type="submit" class="btn btn-success">Submit</button>
-      <button type="reset" class="btn btn-default">Reset</button>
+      <button id="reset" type="reset" class="btn btn-default">Reset</button>
     </div>
 
   </form>
