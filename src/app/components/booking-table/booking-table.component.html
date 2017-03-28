@@ -56,7 +56,10 @@
         <textarea class="form-control" rows="5" #comment></textarea>
       </div>
 
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" (click)="addReservation(
+      dateOfReservation.value,
+      timeOfReservation.value,
+      tableId)" class="btn btn-success">Submit</button>
       <button id="reset" type="reset" class="btn btn-default">Reset</button>
     </div>
 

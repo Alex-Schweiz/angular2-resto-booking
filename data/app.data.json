@@ -113,19 +113,15 @@
     {"firstName":"Beverly","lastName":"Harvey","phone":"84-(393)271-5573","email":"bharveyw@prweb.com","numberOfPersons":2,"comment":"convallis tortor risus dapibus augue vel accumsan tellus nisi eu","dateOfReservation":"2016-10-10","timeOfReservation":"7:53","createdAt":"16:20"},
     {"firstName":"Ernest","lastName":"Garrett","phone":"263-(931)424-7604","email":"egarrettx@macromedia.com","numberOfPersons":1,"comment":"cubilia curae mauris viverra diam vitae quam suspendisse potenti","dateOfReservation":"2016-12-23","timeOfReservation":"0:51","createdAt":"10:08"},
     {"firstName":"Benjamin","lastName":"Sanders","phone":"7-(750)780-7861","email":"bsandersy@eventbrite.com","numberOfPersons":1,"comment":"tempus sit amet sem fusce consequat nulla nisl nunc nisl","dateOfReservation":"2016-04-23","timeOfReservation":"6:22","createdAt":"17:09"}],
-  "reserved" :[{
-    "date" : "2017-03-24",
-    "slots" : "6"
-  }],
-  "reserved2" : [{
+  "reservations" : [{
     "2017-03-24" : {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
       "8": [],
       "9": [],
       "10": []
@@ -141,6 +137,5 @@
       "9": [],
       "10": []
     }
-
   }]
 }

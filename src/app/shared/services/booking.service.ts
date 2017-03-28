@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { IBooking } from '../interfaces/booking';
+import { IReservation } from '../interfaces/reservation';
 
 import 'rxjs/add/operator/map';
 
@@ -8,8 +9,19 @@ import 'rxjs/add/operator/map';
 
 export class BookingsService {
   bookings: FirebaseListObservable<IBooking[]>;
+  reservations: FirebaseListObservable<IReservation[]>;
 
   constructor(private _af: AngularFire) {
+  }
+
+  getReservations() {
+    this.reservations = this._af.database.list('/reservations', {})as
+      FirebaseListObservable<IReservation[]>;
+    return this.reservations;
+  }
+
+  addReservation(newReservation) {
+    return this.reservations.push(newReservation);
   }
 
   getBookings() {
@@ -40,7 +52,6 @@ export class BookingsService {
   return this.bookings.remove(key);
   }
   showOneBooking(key) {
-    console.dir('This booking ' );
     return this.bookings['key'];
   }
   updateBooking(key, updBooking) {

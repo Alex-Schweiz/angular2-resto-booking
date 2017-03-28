@@ -12,27 +12,9 @@ export class TablesService {
   constructor(private _af: AngularFire){
   }
 
-  getTables(){
+  getTables() {
     this.timestamps = this._af.database.list('/tables')as
       FirebaseListObservable<ITable[]>;
     return this.timestamps;
   }
-
-  /*getCategories(){
-   this.categories = this._af.database.list('/categories')as
-   FirebaseListObservable<Category[]>;
-   return this.categories;
-   }
-
-   addBusiness(newBusiness){
-   return this.businesses.push(newBusiness);
-   }
-
-   updateBusiness(key, updBusiness){
-   return this.businesses.update(key, updBusiness);
-   }
-
-   deleteBusiness(key){
-   return this.businesses.remove(key);
-   }*/
 }

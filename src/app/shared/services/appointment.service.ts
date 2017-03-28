@@ -16,21 +16,4 @@ export class TimestampsService {
         FirebaseListObservable<ITimestamp[]>;
     return this.timestamps;
   }
-  /*getCategories(){
-    this.categories = this._af.database.list('/categories')as
-      FirebaseListObservable<Category[]>;
-    return this.categories;
-  }
-
-   addTimestamp(newTimestamp) {
-   return this.timestamps.push(newTimestamp);
-   }
-
-  updateBusiness(key, updBusiness){
-    return this.businesses.update(key, updBusiness);
-  }
-
-  deleteBusiness(key){
-    return this.businesses.remove(key);
-  }*/
 }

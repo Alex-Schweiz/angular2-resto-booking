@@ -65,7 +65,6 @@ export class AdminBookingComponent implements OnInit {
       timeOfReservation: this.activeTimeOfReservation
     }
 
-
     this._bookingService.updateBooking(this.activeKey, updBooking);
   }
 }
