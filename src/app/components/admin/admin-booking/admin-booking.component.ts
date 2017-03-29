@@ -13,6 +13,11 @@ import { IBooking } from '../../../shared/interfaces/booking';
 export class AdminBookingComponent implements OnInit {
   pageTitle = 'All bookings';
   bookings: IBooking[];
+  public data;
+  public filterQuery = '';
+  public rowsOnPage = 10;
+  public sortBy = 'name';
+  public sortOrder = 'asc';
 
   activeKey: string;
   activeFirstName: string;
@@ -27,8 +32,14 @@ export class AdminBookingComponent implements OnInit {
   constructor(private _bookingService: BookingsService) { }
 
   ngOnInit() {
+    /*const pageIndex = (this.selectedPage - 1) * this.productsPerPage;*/
     this._bookingService.getBookings().subscribe( bookings =>
       this.bookings = bookings);
+  }
+
+  // Pagination
+  public toInt(num: string) {
+    return +num;
   }
 
   deleteBooking(key) {

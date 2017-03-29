@@ -17,10 +17,12 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AdminDashComponent } from './components/admin/admin-dash/admin-dash.component';
 import { AdminBookingComponent } from './components/admin/admin-booking/admin-booking.component';
 import { BookingTableComponent } from './components/booking-table/booking-table.component';
+import {DataTableModule} from 'angular2-datatable';
 
 // Providers
 import {routing, appRoutingProviders} from './app.routing';
 import {AuthGuard} from './shared/auth.service';
+import {DataFilterPipe} from './components/admin/admin-booking/admin-booking.pipe';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCokQz-QYBmembwliSq_QnZbVb1RIyaRl4',
@@ -44,13 +46,15 @@ export const firebaseConfig = {
     SignupComponent,
     AdminDashComponent,
     AdminBookingComponent,
-    BookingTableComponent
+    BookingTableComponent,
+    DataFilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
+    DataTableModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [appRoutingProviders, AuthGuard],
