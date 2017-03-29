@@ -14,7 +14,8 @@ import {IReservation} from '../../shared/interfaces/reservation';
 })
 export class BookingTableComponent implements OnInit {
   pageTitle = 'Welcome to Booking table';
-  tableId;
+  tableId ;
+  freeTable = 1;
   bookings: IBooking[];
   reservations: IReservation[];
 
@@ -35,6 +36,11 @@ export class BookingTableComponent implements OnInit {
       this.tableId = params['id'];
       console.log( 'Selected table is : ' + this.tableId);
     });
+  }
+
+  checkTable(){
+    this.freeTable = Math.random() * 10;
+    return this.freeTable;
   }
 
   addBooking(
@@ -68,11 +74,11 @@ export class BookingTableComponent implements OnInit {
       fakeTable: tableId + 2
     }
 
-    /*const Reserved = {
-      'dateOfReservation': {
-        '1': 114
-      }
-    }*/
+    const resDate = newReservation.dateOfReservation;
+
+    const Reserved = {
+      resDate : resDate
+    }
 
     /*const testReserved = {
       `${dateOfReservation}`: {
@@ -82,7 +88,8 @@ export class BookingTableComponent implements OnInit {
 
     console.log(newBooking);
     this._bookingService.addBooking(newBooking);
-    this._bookingService.addReservation(newReservation);
+    this._bookingService.addReservation(Reserved);
+    console.log('This date of reservation  ' + newReservation.dateOfReservation);
   }
 
   addReservation(

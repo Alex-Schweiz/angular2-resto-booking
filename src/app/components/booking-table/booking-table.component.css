@@ -2,3 +2,23 @@ h2 {
   margin-left: 27%;
   margin-bottom: 2%;
 }
+
+check-field {
+  margin-top: 20px;
+}
+
+.check-button {
+  width: 75%;
+}
+
+p {
+  font-size: 36px;
+}
+
+.freed {
+  color: green;
+}
+
+.occupied {
+  color: red;
+}

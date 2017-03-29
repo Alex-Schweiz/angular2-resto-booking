@@ -15,12 +15,31 @@
     <div class="col-md-8 col-md-offset-1">
       <div class="form-group col-md-6">
         <label >Date of reservation :</label>
-        <input type="date" class="form-control" #dateOfReservation required>
+        <input
+          [(ngModel)]="myDate" ng2-datetime-picker date-only="true"
+          [ngModelOptions]="{standalone: true}"
+
+          type="text" class="form-control" #dateOfReservation required>
       </div>
       <div class="form-group col-md-6">
         <label>Time of reservation :</label>
-        <input type="time" class="form-control" #timeOfReservation required>
+        <input
+          [(ngModel)]="myTime" ng2-datetime-picker time-only="true"
+          [ngModelOptions]="{standalone: true}" date-format=" HH:mm"
+
+          type="text" class="form-control" #timeOfReservation required>
       </div>
+
+
+      <div class="check-field row form-group col-md-9 col-md-offset-3">
+        <a (click)="checkTable()" class="btn btn-success check-button"><h4>Check availability</h4></a>
+        <p class="freed" *ngIf="freeTable > 5">This table is available</p>
+        <p class="occupied" *ngIf="freeTable < 5">
+          This table is not available <br>
+          Please, select another time
+        </p>
+      </div>
+
       <div class="form-group col-md-6">
         <label>First Name :</label>
         <input type="text" class="form-control" #firstName required>
@@ -29,6 +48,7 @@
         <label>Last Name :</label>
         <input type="text" class="form-control" #lastName required>
       </div>
+
       <div class="form-group col-md-12">
         <label>Phone :</label>
         <input type="text" class="form-control" #phone required>
@@ -55,7 +75,6 @@
         <label>Leave your comment :</label>
         <textarea class="form-control" rows="5" #comment></textarea>
       </div>
-
       <button type="submit" (click)="addReservation(
       dateOfReservation.value,
       timeOfReservation.value,
@@ -65,97 +84,3 @@
 
   </form>
 </div>
-
-
-<!-- Add form
-  <div class="large-12 columns">
-    <h3>Add Business</h3>
-    <form (submit)="addBusiness(
-      company.value,
-      category.value,
-      years_in_business.value,
-      description.value,
-      phone.value,
-      email.value,
-      street_address.value,
-      city.value,
-      state.value,
-      zipcode.value)" >
-
-      <div class="row">
-        <div class="large-6 columns">
-          <label> Company
-            <input type="text" placeholder="Company Name" #company>
-          </label>
-        </div>
-        <div class="large-6 columns">
-          <label> Category
-            <select #category>
-              <option value="0">Select</option>
-              <option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <label> Years in Business
-            <input type="text" placeholder="Years in bussiness" #years_in_business>
-          </label>
-        </div>
-        <div class="large-6 columns">
-          <label> Description
-            <textarea #description></textarea>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <label> Phone
-            <input type="text" placeholder="Phone" #phone>
-          </label>
-        </div>
-        <div class="large-6 columns">
-          <label> Email
-            <input type="text" placeholder="Email" #email>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <label> Street Address
-            <input type="text" placeholder="Street Address" #street_address>
-          </label>
-        </div>
-        <div class="large-6 columns">
-          <label> City
-            <input type="text" placeholder="City" #city>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-          <label> State
-            <input type="text" placeholder="State" #state>
-          </label>
-        </div>
-        <div class="large-6 columns">
-          <label> Zip code
-            <input type="text" placeholder="Zip code" #zipcode>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="large-12">
-          <input type="submit" class="button" value="Submit">
-        </div>
-      </div>
-
-    </form>
-  </div>
-</div>-->

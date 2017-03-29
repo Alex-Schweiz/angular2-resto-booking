@@ -23,6 +23,7 @@ import {DataTableModule} from 'angular2-datatable';
 import {routing, appRoutingProviders} from './app.routing';
 import {AuthGuard} from './shared/auth.service';
 import {DataFilterPipe} from './components/admin/admin-booking/admin-booking.pipe';
+import {Ng2DatetimePickerModule} from 'ng2-datetime-picker';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCokQz-QYBmembwliSq_QnZbVb1RIyaRl4',
@@ -55,6 +56,7 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     DataTableModule,
+    Ng2DatetimePickerModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [appRoutingProviders, AuthGuard],
